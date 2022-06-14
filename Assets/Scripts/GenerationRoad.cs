@@ -10,7 +10,7 @@ public class GenerationRoad : MonoBehaviour
     {
         int indice = Random.Range(0, 2);
         newobjectToUse = Instantiate(objectToUse[indice]);
-        Destroy(newobjectToUse, 20);
+        Destroy(newobjectToUse, 10);
     }
     
     // Update is called once per frame

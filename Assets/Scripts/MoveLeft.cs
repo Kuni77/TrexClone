@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
 
-    private float speed = 300;
+    public static float speed = 300;
     private bool collisionChecker;
 
     void Start()
@@ -19,15 +19,6 @@ public class MoveLeft : MonoBehaviour
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 
-    public float GetSpeed()
-    {
-        return speed;
-    }
-
-    public void SetSpeed(float _speed)
-    {
-        speed = _speed;
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //if(collision.Equals(GameObject.FindGameObjectsWithTag("checker")))

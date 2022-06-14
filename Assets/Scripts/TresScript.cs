@@ -17,11 +17,13 @@ public class TresScript : MonoBehaviour
     void Update()
     {
         estAusSol = Physics2D.OverlapCircle(detecteur.position, rayonDetecteur, coucheDeCollision);
-        Debug.Log(peutSauter);
+        //Debug.Log(peutSauter);
         if (Input.GetButton("Jump") && estAusSol)
         {
             rb.velocity = Vector2.up * velocity;
         }
+        if (Score.score % 100 == 0)
+            MoveLeft.speed += 1;
     }
 
     private void OnDrawGizmos()
@@ -32,8 +34,13 @@ public class TresScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.GetType());
-        if (!collision.Equals(GameObject.FindGameObjectsWithTag("road")))
-            SceneManager.LoadScene("Menu");
+        //Debug.Log(collision.gameObject.tag);
+        if (!collision.gameObject.tag.Equals("road"))
+        { 
+            SceneManager.LoadScene("Menu"); 
+            HighScore hs = new HighScore();
+            hs.highScore();
+        }
+
     }
 }
