@@ -7,7 +7,7 @@
 
 
 ## Screenshots
-<img src="./img/Trex1.PNG" alt="" width="300" height="150"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./img/Trex2.PNG" alt="" width="300" height="150"/>
+<img src="./img/Trex1.PNG" alt="" width="200" height="150"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="./img/Trex2.PNG" alt="" width="200" height="150"/>
 
 
 
